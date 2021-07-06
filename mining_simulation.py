@@ -61,12 +61,12 @@ def Simulate(alpha,gamma,N, seed):
                 # HiddenBlocks no change
                 state=0
             elif r<=alpha+(1-alpha)*gamma:
+                SelfishRevenue+=1
                 ChainLength+=1
                 # HiddenBlocks no change
                 state=0
             else:
                 # SelfishRevenue no change, Others obtain a revenue of two
-                SelfishRevenue+=1
                 ChainLength+=1
                 # HiddenBlocks no change
                 state=0
