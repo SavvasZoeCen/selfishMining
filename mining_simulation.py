@@ -17,8 +17,10 @@ def Simulate(alpha,gamma,N, seed):
     # the length of hidden blocks
     HiddenBlocks=0
 
+    print(alpha,gamma,N,seed)
     #A round begin when the state=0
     for i in range(N):
+        print(state)
         r=random.random()
         if state==0:
             #The selfish pool has 0 hidden block.
