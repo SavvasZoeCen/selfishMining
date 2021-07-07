@@ -50,6 +50,7 @@ def Simulate(alpha,gamma,N, seed):
             else:
                 #Write a piece of code to change the required variables.
                 ChainLength+=1
+                # (f) Lead was 1, others find a block.
                 HiddenBlocks=0  #If the pool has a private branch of length 1 and the others mine one block, the pool publishes its branch, which results in two public branches of length 1
                 state=-1
 
@@ -81,7 +82,8 @@ def Simulate(alpha,gamma,N, seed):
                 state+=1
             else:
                 #The honest miners found a block.
-                ChainLength+=2  
+                ChainLength+=2
+                SelfishRevenue+=2  # (g) Lead was 2, others find a block.
                 HiddenBlocks=0  #If the others mine a block when the lead is two, the pool publishes its private branch, and the system drops to a lead of 0.
                 state=0
 
@@ -94,6 +96,7 @@ def Simulate(alpha,gamma,N, seed):
             else:
                 #The honest miners found a block
                 ChainLength+=1   #?
+                SelfishRevenue+=1  # (h) Lead was more than 2, others win.
                 HiddenBlocks-=1  #?
                 state-=1
 
