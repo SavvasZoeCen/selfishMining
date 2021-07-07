@@ -17,7 +17,7 @@ def Simulate(alpha,gamma,N, seed):
     # the length of hidden blocks
     HiddenBlocks=0
 
-    print("alpha,gamma,N,seed:", alpha,gamma,N,seed)
+    #print("alpha,gamma,N,seed:", alpha,gamma,N,seed)
     #A round begin when the state=0
     for i in range(N):
         #print(state)
@@ -100,7 +100,7 @@ def Simulate(alpha,gamma,N, seed):
                 HiddenBlocks-=1  #?
                 state-=1
 
-    print("state,ChainLength,SelfishRevenue,HiddenBlocks:",state,ChainLength,SelfishRevenue,HiddenBlocks)
+    #print("state,ChainLength,SelfishRevenue,HiddenBlocks:",state,ChainLength,SelfishRevenue,HiddenBlocks)
     return float(SelfishRevenue)/ChainLength
 
 
